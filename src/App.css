@@ -80,8 +80,22 @@ margin-bottom:10px
 .filter_and_select{
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
-  color:white
+  color:white;
+  font-weight: bold;
+  font-size: 20px;
 }
+select{
+  font-size: 18px;
+  height:30px;
+  padding:px;
+  font-family: Cambria;
+  outline:none;
+  border: none;
+  font-style: italic;
+  color: blue;
+
+}
+
 main .profiles{
 grid-template-columns: repeat(3,1fr);
 column-gap: 15px;
@@ -123,7 +137,6 @@ footer{
   text-align: center;
   font-size: 20px;
 }
-
 @media screen and (max-width:1100px){
 main .profiles{
   grid-template-columns: 1fr 1fr;
