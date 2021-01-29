@@ -4,10 +4,9 @@ export default function SearchBox({profiles, setRendered, setCurrentPage}) {
 
     const searchFunction = (e) => {
         if(!e.target.value.trim()) return setRendered(profiles);
-        const searchByFirstName = profiles.filter(eachProfile => eachProfile.FirstName.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1)
-        const searchByLastName = profiles.filter(eachProfile => eachProfile.LastName.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1)
+        const searchResult = profiles.filter(eachProfile => eachProfile.FirstName.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 || eachProfile.LastName.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1 )
 
-        setRendered([...searchByFirstName,...searchByLastName])
+        setRendered([...searchResult])
         setCurrentPage(1)
        }
      
