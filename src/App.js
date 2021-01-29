@@ -8,8 +8,6 @@ import Profiles from './components/profiles'
 import Logo from './logo'
 import Nav from './nav'
 
-
-
 function App() {
   const [ profiles, setProfiles] = useState([])
   const [ currentPage, setCurrentPage] = useState(1)
@@ -33,13 +31,13 @@ function App() {
   
   return (
     <>
-    <header>
+    <header className="flex_display">
       <Logo />
       <Nav />
 
     </header>
     <main>
-    <h1>
+    <h1 className="main_head">
       Patients ({renderedProfiles.length})
     </h1>
     <section className="main_top flex_display">
@@ -55,13 +53,11 @@ function App() {
     <SelectPayment profiles={profiles} setCurrentPage={setCurrentPage} setRendered={setRendered}/>
       </div>
     </aside>
-
     </section>
-
     <Profiles currentProfiles={currentProfiles} />
     </main>
     <footer>
-
+     <p> Copyright Enye, {new Date().getFullYear()} </p> 
     </footer>
     </>
   );

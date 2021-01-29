@@ -10,7 +10,7 @@ export default function SearchBox({profiles, setRendered, setCurrentPage}) {
      
     return (
         <div className="search_box">
-            <input type = "text" placeholder="Enter Patient Name" className="input_search" onKeyUp={searchFunction} style ={{marginLeft:"30px"}}/>     
+            <input type = "text" placeholder="Enter Patient Name to Search" className="input_search" onKeyUp={searchFunction} style ={{marginLeft:"30px"}}/>     
         </div>
     )
 }
