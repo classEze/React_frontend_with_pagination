@@ -4,9 +4,9 @@ export default function SelectPayment({profiles,setCurrentPage,setRendered}) {
 
     function filter_By(e){
         let selectElement = e.target ;
-        selectElement.options[selectElement.selectedIndex].text == "All" ?
+        selectElement.options[selectElement.selectedIndex].text === "All" ?
         setRendered(profiles) :
-        setRendered(profiles.filter(eachProfile => eachProfile.PaymentMethod == selectElement.options[selectElement.selectedIndex].text))
+        setRendered(profiles.filter(eachProfile => eachProfile.PaymentMethod === selectElement.options[selectElement.selectedIndex].text))
         setCurrentPage(1)
        }
 

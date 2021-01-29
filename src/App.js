@@ -14,7 +14,7 @@ function App() {
   const [ renderedProfiles , setRendered ] = useState ([])
 
   useEffect( ()=> fetch_Profiles() , [])
-  useEffect(()=>setRendered(profiles) , [profiles] )
+  useEffect( ()=>setRendered(profiles) , [profiles] )
 
   function fetch_Profiles(){
     fetch(`https://api.enye.tech/v1/challenge/records`)
@@ -42,7 +42,7 @@ function App() {
     </h1>
     <section className="main_top flex_display">
     <aside className="pagination_and_search">
-    <Pagination numberOfPages={numberOfPages} setCurrentPage={setCurrentPage}/>
+    <Pagination numberOfPages={numberOfPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
     <SearchBox setRendered={setRendered} setCurrentPage={setCurrentPage} profiles={profiles}/>
     </aside>
 
