@@ -58,10 +58,6 @@ margin-bottom:10px
 .Pagination button:focus{
   outline: unset;
 }
-.Pagination button.active
-{
-  border:2px solid white
-}
 .search_box{
   padding: 0;
   margin-top:10px;
@@ -78,15 +74,13 @@ margin-bottom:10px
    font-size: 20px;
    border: unset;
 }
-.filter_and_select{
-  color:white
-}
 .select_payment,.select_gender{
   padding-right: 15px;
 }
 .filter_and_select{
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
+  color:white
 }
 main .profiles{
 grid-template-columns: repeat(3,1fr);
@@ -138,5 +132,12 @@ main .profiles{
 @media screen and (max-width:810px){
 main .profiles{
   grid-template-columns: 1fr;
+  
+}
+main .main_top{
+  flex-direction: column-reverse;
+}
+.filter_and_select{
+  margin-bottom: 10px;
 }
 }
