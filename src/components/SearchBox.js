@@ -22,7 +22,7 @@ export default function SearchBox({profiles, setRendered, setCurrentPage}) {
              placeholder="Enter Patient Name to Search"
              className="input_search"
              onKeyUp={searchFunction}
-             style ={{marginLeft:"30px"}}
+             style ={{marginLeft:"20px"}}
             />     
         </div>
     )
