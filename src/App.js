@@ -5,8 +5,9 @@ import SelectGender from './components/SelectGender'
 import SelectPayment from './components/SelectPayment'
 import "./App.css"
 import Profiles from './components/profiles'
-import Logo from './logo'
-import Nav from './nav'
+import Logo from './components/logo'
+import Nav from './components/nav'
+import Spinner from './components/spinner'
 
 function App() {
   const [ profiles, setProfiles] = useState([])
@@ -34,9 +35,9 @@ function App() {
     <header className="flex_display">
       <Logo />
       <Nav />
-
     </header>
     <main>
+
     <h1 className="main_head">
       Patients ({renderedProfiles.length})
     </h1>
@@ -54,7 +55,9 @@ function App() {
       </div>
     </aside>
     </section>
-    <Profiles currentProfiles={currentProfiles} />
+    {profiles.length === 0 && <Spinner />
+}
+    {profiles.length > 0 && <Profiles currentProfiles={currentProfiles}/>}
     </main>
     <footer>
      <p> Copyright Enye, {new Date().getFullYear()} </p> 

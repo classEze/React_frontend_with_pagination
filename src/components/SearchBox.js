@@ -1,4 +1,6 @@
 import React from 'react'
+import Search from '@material-ui/icons/Search';
+
 
 export default function SearchBox({profiles, setRendered, setCurrentPage}) {
     const searchFunction = (e) => {
@@ -23,7 +25,11 @@ export default function SearchBox({profiles, setRendered, setCurrentPage}) {
              className="input_search"
              onKeyUp={searchFunction}
              style ={{marginLeft:"20px"}}
-            />     
+            />  
+            <Search
+             className= "search_icon"
+             fontSize= "large"
+             /> 
         </div>
     )
 }

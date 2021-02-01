@@ -4,6 +4,7 @@ export default function SelectGender({profiles,setCurrentPage,setRendered}) {
 
     function filter_By_Gender(e){
         let selectElement = e.target ;
+        
         selectElement.options[selectElement.selectedIndex].text === "All" ?
         setRendered(profiles) :
         setRendered(profiles.filter(eachProfile => eachProfile.Gender === selectElement.options[selectElement.selectedIndex].text))
